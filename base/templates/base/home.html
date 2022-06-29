@@ -1,0 +1,38 @@
+{% load crispy_forms_tags %}
+<style>
+  .title {
+    text-align: center;
+    justify-content: center;
+  }
+  .feed {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .post {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+</style>
+<body>
+  <div class="title">
+    <h1>__TODO__</h1>
+  </div>
+  <div class="feed">
+    <div class="post">
+      {%for event in activity%}
+      <div>
+        <h6>{{event.date}}</h6>
+        <h1>{{event.title}}</h1>
+        <h3>{{event.description}}</h3>
+        <hr />
+      </div>
+      <div>
+       
+      </div>
+      {%endfor%}
+    </div>
+    <div>
+      {%include 'base/todoform.html'%}
+    </div>
+  </div>
+</body>
