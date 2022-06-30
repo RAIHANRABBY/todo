@@ -8,9 +8,13 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
-  .post {
+  .activityform {
     display: grid;
     grid-template-columns: 4fr 1fr;
+  }
+  .textarea{
+    text-align: center;
+    justify-content: center;
   }
 </style>
 <body>
@@ -18,16 +22,17 @@
     <h1>__TODO__</h1>
   </div>
   <div class="feed">
-    <div class="post">
+
+    <div class="activityform">
       {%for event in activity%}
-      <div>
-        <h6>{{event.date}}</h6>
+      <div class="textarea">
+        <small>{{event.date}}</small>
         <h1>{{event.title}}</h1>
         <h3>{{event.description}}</h3>
         <hr />
       </div>
       <div>
-       
+       <button><a href="{%url 'delete' event.id%}">Remove</a></button>
       </div>
       {%endfor%}
     </div>

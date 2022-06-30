@@ -24,5 +24,5 @@ def remove_event(request,pk):
             
         return redirect('home')
 
-    content={'event':event}
-    return render(request,'base/home.html',content)
+    content={'work':event}
+    return render(request,'base/delete.html',content)

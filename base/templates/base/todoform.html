@@ -1,6 +1,7 @@
 {% load crispy_forms_tags %}
+
 <form action="" method="POST">
     {%csrf_token%}
-     {{activityForm|crispy}}
-    <input type="submit" />
-  </form>
+    {{activityForm|crispy}}
+    <input type="submit" value="Create Event" />
+</form>
